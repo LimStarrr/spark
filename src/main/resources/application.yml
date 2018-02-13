@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: local
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spark?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    username: root
+    password: limstar0724
+    driver-class-name: com.mysql.jdbc.Driver
+
+#---
+#
+#spring:
+#  profiles:
+#    active: dev
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+#    database-platform: org.hibernate.dialect.MySQLDialect
+#
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/spark?useUnicode=true&characterEncoding=UTF8&useSSL=false
+#    username: root
+#    password: limstar0724
+#    driver-class-name: com.mysql.jdbc.Driver
+
