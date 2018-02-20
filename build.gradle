@@ -28,12 +28,23 @@ repositories {
 //}
 
 dependencies {
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile("org.springframework.boot:spring-boot-starter-data-jpa")
 
+	compile 'org.springframework.boot:spring-boot-starter-data-redis'
+
+//	compile 'org.springframework.data:spring-data-redis:2.0.4.RELEASE'
+//	compile project(':spring-security-config')
+//	compile 'org.springframework:spring-webflux'
+	compile 'biz.paluch.redis:lettuce:4.4.0.Final'
+
 	compileOnly 'org.projectlombok:lombok:1.16.20'
 //	apt "org.projectlombok:lombok:1.16.20"
+//	compile 'org.springframework.security:spring-security-web:5.0.1.RELEASE'
+//	compile 'org.springframework.security:spring-security-config:5.0.1.RELEASE'
 
 	runtime('mysql:mysql-connector-java')
 
