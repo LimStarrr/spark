@@ -1,31 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Spark</title>
+    <title>Login page</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}" />
 </head>
 <body>
-    <form class="signup-form" action="/member" method="POST">
-        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="user_name" name="uid" type="text" class="validate"/>
-                <label for="user_name">Username</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="email" name="uemail" type="email" class="validate"/>
-                <label for="email">Email</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password" name="upw" type="password" class="validate"/>
-                <label for="password">Password</label>
-            </div>
-        </div>
-        <input class="signup-btn waves-effect waves-light btn" type="submit" value="가입하기" />
-    </form>
+<h1>Login page</h1>
+<p>Example user: user / password</p>
+<p th:if="${loginError}" class="error">Wrong user or password</p>
+<form th:action="@{/login}" method="post">
+    <label for="username">Username</label>:
+    <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
+    <label for="password">Password</label>:
+    <input type="password" id="password" name="password" /> <br />
+    <input type="submit" value="Log in" />
+</form>
+<p><a href="/index" th:href="@{/index}">Back to home page</a></p>
 </body>
 </html>

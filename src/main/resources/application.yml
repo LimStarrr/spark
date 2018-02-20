@@ -1,6 +1,16 @@
+server:
+  port: 8080
+
 spring:
   profiles:
     active: local
+
+  thymeleaf:
+    cache: false
+
+  redis:
+    sentinel:
+      master: mymaster
 
   jpa:
     hibernate:
@@ -13,6 +23,7 @@ spring:
     username: root
     password: limstar0724
     driver-class-name: com.mysql.jdbc.Driver
+
 
 #---
 #
